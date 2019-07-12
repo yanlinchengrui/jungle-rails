@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+
+<body>
+  <h1> Thank you for shopping at Jungle. </h1>
+  <p> You have successfully ordered: </p>
+
+  <% @order.line_items.each do |item| %>
+  <p> Product: <%= item.product.name %> </p>
+  <p> Description: <%= item.product.description %> </p>
+  <p> Price: <%= item.product.price %> </p>
+  <p> Quantity: <%= item[:quantity].to_i %> </p>
+  <% end %>
+
+  <p>Thanks for shopping and have a great day!</p>
+</body>
+
+</html>

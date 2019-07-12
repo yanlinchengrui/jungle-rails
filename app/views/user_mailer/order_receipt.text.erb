@@ -1,0 +1,16 @@
+Thank you for shopping at Jungle.
+===============================================
+ 
+You have successfully ordered: 
+
+<% @order.line_items.each do |item| %>
+  Product: <%= item.product.name %>
+  Description: <%= item.product.description %>
+  Price: <%= item.product.price %>
+  Quantity: <%= item[:quantity].to_i %>
+
+<% end %>
+
+Total Price: <%= @order.total_cents / 100.0 %>
+ 
+Thanks for shopping and have a great day!
