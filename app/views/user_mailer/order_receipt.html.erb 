@@ -16,7 +16,8 @@
   <p> Quantity: <%= item[:quantity].to_i %> </p>
   <% end %>
 
-  <p>Thanks for shopping and have a great day!</p>
+  <p> Total Price: <%= @order.total_cents / 100.0 %> </p>
+  <p> Thanks for shopping and have a great day! </p>
 </body>
 
 </html>

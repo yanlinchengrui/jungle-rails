@@ -7,16 +7,10 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-1">
       <%= form_tag '/login' do %>
-    
-        <div class="form-group">
-          Email: <%= text_field_tag :email %>
-        </div
-    
-        <div class="form-group">
-          Password: <%= password_field_tag :password %>
-        </div>
-    
-        <%= submit_tag "Submit", class: 'btn btn-primary' %>
+
+        Email: <%= text_field_tag :email %>
+        Password: <%= password_field_tag :password %>
+        <%= submit_tag "Submit" %>
       
       <% end %>
     </div>
