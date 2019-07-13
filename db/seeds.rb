@@ -132,5 +132,40 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+cat4 = Category.find_or_create_by! name: 'SWAG'
+
+user1 = User.create!({
+  first_name: "Pepe",
+  last_name: "Yam",
+  email: "pepe@pepe.ca",
+  password_digest: "$2a$10$PAO66MCloGt9Jgl44CdHUeLjQ2BnwtZQBI.nksb6j5P7ODj0WIt1e"
+})
+
+user2 = User.create!({
+  first_name: "Yay",
+  last_name: "Hey",
+  email: "123@123.ca",
+  password_digest: "$2a$10$PAO66MCloGt9Jgl44CdHUeLjQ2BnwtZQBI.nksb6j5P7ODj0WIt1e"
+})
+
+product_Supreme = cat4.products.create!({
+  name:  'Supreme Bottle',
+  description: "It's a hot water bottle which is useless but expensive.",
+  image: open_asset('swag1.jpg'),
+  quantity: 77,
+  price: 7_777.77
+})
+
+product_Supreme.reviews.create!({
+  user_id: 1,
+  description: "Why did I buy it?",
+  rating: 1
+})
+
+product_Supreme.reviews.create!({
+  user_id: 2,
+  description: "I LOVE IT BECAUSE IT'S EXPENSIVE!",
+  rating: 5
+})
 
 puts "DONE!"

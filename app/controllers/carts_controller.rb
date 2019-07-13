@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
 
+  before_filter :authorize
+
   def show
     if cart.length == 0 
       flash.now[:notice] = "Your cart is empty 😅"

@@ -11,15 +11,12 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
-
     <% if current_user %>
-      Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+      <div class="alert alert-info" style="text-align: center">
+        <strong>😆Welcome to Jungle, <%= current_user.first_name %> <%= current_user.last_name %> [ <%= current_user.email %> ]❗️</strong>
+      </div>
     <% end %>
-
     <%= yield %>
-  
   </main>
 
   <%= yield :end_of_body %>
