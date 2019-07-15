@@ -2,6 +2,10 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshot
+
+!["main page of Jungle"](https://github.com/yanlinchengrui/jungle-rails/blob/master/docs/main.png)
+!["detail page of Jungle"](https://github.com/yanlinchengrui/jungle-rails/blob/master/docs/detail.png)
 
 ## Setup
 
